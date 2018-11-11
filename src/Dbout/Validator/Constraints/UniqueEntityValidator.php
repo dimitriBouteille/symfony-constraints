@@ -58,7 +58,8 @@ class UniqueEntityValidator extends ConstraintValidator {
             $this->context->getPropertyName() => $value
         ]);
 
-        if(!is_null($search)) {
+        $currentObjectId = $this->context->getObject()->getId();
+        if(!is_null($search) && (is_null($currentObjectId) || $currentObjectId != $search->getId())) {
             $this->context->buildViolation($constraint->message)
                 ->addViolation();
         }
