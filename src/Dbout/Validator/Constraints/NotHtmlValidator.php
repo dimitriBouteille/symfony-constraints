@@ -6,7 +6,7 @@ use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
 
 /**
- * Class NoHtmlValidator
+ * Class NotHtmlValidator
  * Permet de valider une chaine ne contenant pas de code html
  *
  * @package     Dbout\Validator\Constraints;
@@ -15,7 +15,7 @@ use Symfony\Component\Validator\ConstraintValidator;
  * @link        https://github.com/dimitriBouteille Github
  * @copyright   (c) 2018 Dimitri BOUTEILLE
  */
-class NoHtmlValidator extends ConstraintValidator {
+class NotHtmlValidator extends ConstraintValidator {
 
     /**
      * Function validate

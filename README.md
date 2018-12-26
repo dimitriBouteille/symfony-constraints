@@ -26,12 +26,12 @@ La librairie est compatible uniquement avec `Symfony 4`.
          */
         private $longitude;
 
-- `NoHtml` Permet de valider une chaine ne contenant pas de code html.
+- `NotHtml` Permet de valider une chaine ne contenant pas de code html.
 
         use Dbout\Validator\Constraints as DboAssert;
         
         /**
-         * @DboAssert\NoHtml()
+         * @DboAssert\NotHtml()
          */
         private $description;
         
