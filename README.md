@@ -35,6 +35,14 @@ La librairie est compatible uniquement avec `Symfony 4`.
          */
         private $description;
         
+- `Phone` Permet de valider un numéro de téléphone au format français.
+
+        use Dbout\Validator\Constraints as DboAssert;
+        
+        /**
+         * @DboAssert\Phone()
+         */
+        private $phone;        
 
 - `Username` Permet de valider un pseudo qui doit être compris entre 3 et 25 caractères et ne contenir que des letters, des chiffres ou _.
 

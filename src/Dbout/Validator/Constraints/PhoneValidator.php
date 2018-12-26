@@ -5,8 +5,8 @@ namespace Dbout\Validator\Constraints;
 use Symfony\Component\Validator\{Constraint, ConstraintValidator};
 
 /**
- * Class NotHtmlValidator
- * Permet de valider une chaine ne contenant pas de code html
+ * Class PhoneValidator
+ * Permet de valider un numero de telephone
  *
  * @package     Dbout\Validator\Constraints;
  *
@@ -14,18 +14,26 @@ use Symfony\Component\Validator\{Constraint, ConstraintValidator};
  * @link        https://github.com/dimitriBouteille Github
  * @copyright   (c) 2018 Dimitri BOUTEILLE
  */
-class NotHtmlValidator extends ConstraintValidator {
+class PhoneValidator extends ConstraintValidator {
 
     /**
      * Function validate
      *
-     * @param mixed                                   $string
+     * @param mixed                                   $phone
      * @param \Symfony\Component\Validator\Constraint $constraint
      */
-    public function validate($string, Constraint $constraint) {
+    public function validate($phone, Constraint $constraint) {
 
-        if($string != strip_tags($string)) {
+        $separators = null;
+        if(!empty($constraint->separators)){
+            $separators = '['.$constraint->separators.']?';
+        }
+
+        $regex = '#^0[0-9]('.$separators.'[0-9]{2}){4}$#';
+
+        if(!empty($phone) && !preg_match($regex, $phone)) {
             $this->context->buildViolation($constraint->message)
+                ->setParameter('{{phone}}', $phone)
                 ->addViolation();
         }
     }
