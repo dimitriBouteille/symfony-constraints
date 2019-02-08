@@ -52,6 +52,15 @@ La librairie est compatible uniquement avec `Symfony 4`.
          * @DboAssert\Username(message="Le pseudo doit être compris entre 3 et 25 caractères et non doit contenir aucun caractères spécial")
          */
         private $username;
+        
+- `PostalCode` Permet de valider un code postal au format français
+
+        use Dbout\Validator\Constraints as DboAssert;
+        
+        /**
+         * @DboAssert\PostalCode()
+         */
+        private $postalCode;
 
 - `UniqueEntity` Permet de valider l'unicité d'une entitée selon une propriéte. Cette contrainte est similaire à la contraite `UniqueEntity` de Doctrine, à la seule différence que cette contrainte peut-être vérifier à l'extérieur d'un formulaire par le service `ValidatorInterface`.
  
