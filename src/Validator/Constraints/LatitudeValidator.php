@@ -1,28 +1,28 @@
 <?php
 
-namespace Dbout\Validator\Constraints;
+namespace Dbout\SfConstraints\Validator\Constraints;
 
 use Symfony\Component\Validator\{Constraint, ConstraintValidator};
 
 /**
- * Class LongitudeValidator
+ * Class LatitudeValidator
  *
- * @package Dbout\Validator\Constraints
+ * @package Dbout\SfConstraints\Validator\Constraints
  *
  * @author      Dimitri BOUTEILLE <bonjour@dimitri-bouteille.fr>
  * @link        https://github.com/dimitriBouteille Github
  * @copyright   (c) 2020 Dimitri BOUTEILLE
  */
-class LongitudeValidator extends ConstraintValidator
+class LatitudeValidator extends ConstraintValidator
 {
 
     /**
-     * @param mixed $longitude
+     * @param mixed $latitude
      * @param Constraint $constraint
      */
-    public function validate($longitude, Constraint $constraint)
+    public function validate($latitude, Constraint $constraint)
     {
-        if($longitude < $constraint->min || $longitude > $constraint->max) {
+        if($latitude < $constraint->min || $latitude > $constraint->max) {
             $this->context->buildViolation($constraint->message)
                 ->setParameter('{{min}}', $constraint->min)
                 ->setParameter('{{max}}', $constraint->max)

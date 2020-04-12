@@ -21,7 +21,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Dbout\\Validator\\": "src/"
+      "Dbout\\SfConstraints\\": "src/"
     }
   }
 }

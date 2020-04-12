@@ -1,6 +1,6 @@
 <?php
 
-namespace Dbout\Validator\Constraints;
+namespace Dbout\SfConstraints\Validator\Constraints;
 
 use Symfony\Component\Validator\Constraint;
 
@@ -8,7 +8,7 @@ use Symfony\Component\Validator\Constraint;
  * Class Longitude
  *
  * @Annotation
- * @package Dbout\Validator\Constraints
+ * @package Dbout\SfConstraints\Validator\Constraints
  *
  * @author      Dimitri BOUTEILLE <bonjour@dimitri-bouteille.fr>
  * @link        https://github.com/dimitriBouteille Github

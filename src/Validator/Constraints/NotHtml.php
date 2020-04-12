@@ -1,25 +1,25 @@
 <?php
 
-namespace Dbout\Validator\Constraints;
+namespace Dbout\SfConstraints\Validator\Constraints;
 
 use Symfony\Component\Validator\Constraint;
 
 /**
- * Class UniqueEntity
+ * Class NotHtml
  *
  * @Annotation
- * @package Dbout\Validator\Constraints
+ * @package Dbout\SfConstraints\Validator\Constraints
  *
  * @author      Dimitri BOUTEILLE <bonjour@dimitri-bouteille.fr>
  * @link        https://github.com/dimitriBouteille Github
  * @copyright   (c) 2020 Dimitri BOUTEILLE
  */
-class UniqueEntity extends Constraint
+class NotHtml extends Constraint
 {
 
     /**
      * @var string Error message
      */
-    public $message = '';
+    public $message = 'Le code html n\'est pas autorisé.';
 
 }
