@@ -6,30 +6,29 @@ use Symfony\Component\Validator\Constraint;
 
 /**
  * Class Longitude
- * Permet de valider une longitude
- * @Annotation
- * @link https://stackoverflow.com/questions/15965166/what-is-the-maximum-length-of-latitude-and-longitude
  *
- * @package     Dbout\Validator\Constraints;
+ * @Annotation
+ * @package Dbout\Validator\Constraints
  *
  * @author      Dimitri BOUTEILLE <bonjour@dimitri-bouteille.fr>
  * @link        https://github.com/dimitriBouteille Github
- * @copyright   (c) 2018 Dimitri BOUTEILLE
+ * @copyright   (c) 2020 Dimitri BOUTEILLE
  */
-class Longitude extends Constraint {
+class Longitude extends Constraint
+{
 
     /**
-     * @var string Message d'erreur
+     * @var string Error message
      */
     public $message = 'La longitude doit être comprise entre {{min}} et {{max}} degré.';
 
     /**
-     * @var int Longitude minimum
+     * @var int Min longitude
      */
     public $min = -180;
 
     /**
-     * @var int Longitude maximum
+     * @var int Max longitude
      */
     public $max = 180;
 

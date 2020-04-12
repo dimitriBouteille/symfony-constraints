@@ -6,23 +6,24 @@ use Symfony\Component\Validator\Constraint;
 
 /**
  * Class Phone
- * Permet de valider un numero de telephone
  *
- * @package     Dbout\Validator\Constraints;
+ * @Annotation
+ * @package Dbout\Validator\Constraints
  *
  * @author      Dimitri BOUTEILLE <bonjour@dimitri-bouteille.fr>
  * @link        https://github.com/dimitriBouteille Github
- * @copyright   (c) 2018 Dimitri BOUTEILLE
+ * @copyright   (c) 2020 Dimitri BOUTEILLE
  */
-class Phone extends Constraint {
+class Phone extends Constraint
+{
 
     /**
-     * @var string Message d'erreur, peut avoir la clef {{phone}}.
+     * @var string Error message
      */
     public $message = 'Le numéro n\'est pas valide.';
 
     /**
-     * @var string Caracteres de seperation possible
+     * @var string Possible separation characters
      * @example
      * 00.00.00.00.00
      * 00 00 00 00 00

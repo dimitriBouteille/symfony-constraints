@@ -6,30 +6,30 @@ use Symfony\Component\Validator\Constraint;
 
 /**
  * Class Username
- * Permet de valider un pseudo
- * Le pseudo doit etre compris entre 3 et 25 caracteres et ne contenir que des letters, des chiffres ou _
+ * The pseudo must be between 3 and 25 characters and contain only letters, numbers or _
  *
- * @package     App\Dbout\Validator\Constraints;
  * @Annotation
+ * @package Dbout\Validator\Constraints
  *
  * @author      Dimitri BOUTEILLE <bonjour@dimitri-bouteille.fr>
  * @link        https://github.com/dimitriBouteille Github
- * @copyright   (c) 2018 Dimitri BOUTEILLE
+ * @copyright   (c) 2020 Dimitri BOUTEILLE
  */
-class Username extends Constraint {
+class Username extends Constraint
+{
 
     /**
-     * @var string Message d'erreur
+     * @var string Error message
      */
     public $message = 'Le pseudo n\'est pas valide';
 
     /**
-     * @var int Taille minium du pseudo
+     * @var int Min length
      */
     public $min = 3;
 
     /**
-     * @var int Taille maximum du pseudo
+     * @var int Max length
      */
     public $max = 25;
 

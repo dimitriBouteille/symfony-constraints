@@ -6,24 +6,22 @@ use Symfony\Component\Validator\{Constraint, ConstraintValidator};
 
 /**
  * Class NotHtmlValidator
- * Permet de valider une chaine ne contenant pas de code html
  *
- * @package     Dbout\Validator\Constraints;
+ * @package Dbout\Validator\Constraints
  *
  * @author      Dimitri BOUTEILLE <bonjour@dimitri-bouteille.fr>
  * @link        https://github.com/dimitriBouteille Github
- * @copyright   (c) 2018 Dimitri BOUTEILLE
+ * @copyright   (c) 2020 Dimitri BOUTEILLE
  */
-class NotHtmlValidator extends ConstraintValidator {
+class NotHtmlValidator extends ConstraintValidator
+{
 
     /**
-     * Function validate
-     *
-     * @param mixed                                   $string
-     * @param \Symfony\Component\Validator\Constraint $constraint
+     * @param mixed $string
+     * @param Constraint $constraint
      */
-    public function validate($string, Constraint $constraint) {
-
+    public function validate($string, Constraint $constraint)
+    {
         if($string != strip_tags($string)) {
             $this->context->buildViolation($constraint->message)
                 ->addViolation();

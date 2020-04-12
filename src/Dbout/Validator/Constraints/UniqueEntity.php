@@ -6,19 +6,19 @@ use Symfony\Component\Validator\Constraint;
 
 /**
  * Class UniqueEntity
- * Permet de valider l'unicité d'une entitee selon une propriete
- * @Annotation
  *
- * @package     Dbout\Validator\Constraints;
+ * @Annotation
+ * @package Dbout\Validator\Constraints
  *
  * @author      Dimitri BOUTEILLE <bonjour@dimitri-bouteille.fr>
  * @link        https://github.com/dimitriBouteille Github
- * @copyright   (c) 2018 Dimitri BOUTEILLE
+ * @copyright   (c) 2020 Dimitri BOUTEILLE
  */
-class UniqueEntity extends Constraint{
+class UniqueEntity extends Constraint
+{
 
     /**
-     * @var string Message d'erreur
+     * @var string Error message
      */
     public $message = '';
 

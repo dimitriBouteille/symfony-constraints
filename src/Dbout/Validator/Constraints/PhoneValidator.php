@@ -6,24 +6,22 @@ use Symfony\Component\Validator\{Constraint, ConstraintValidator};
 
 /**
  * Class PhoneValidator
- * Permet de valider un numero de telephone
  *
- * @package     Dbout\Validator\Constraints;
+ * @package Dbout\Validator\Constraints
  *
  * @author      Dimitri BOUTEILLE <bonjour@dimitri-bouteille.fr>
  * @link        https://github.com/dimitriBouteille Github
- * @copyright   (c) 2018 Dimitri BOUTEILLE
+ * @copyright   (c) 2020 Dimitri BOUTEILLE
  */
-class PhoneValidator extends ConstraintValidator {
+class PhoneValidator extends ConstraintValidator
+{
 
     /**
-     * Function validate
-     *
-     * @param mixed                                   $phone
-     * @param \Symfony\Component\Validator\Constraint $constraint
+     * @param mixed $phone
+     * @param Constraint $constraint
      */
-    public function validate($phone, Constraint $constraint) {
-
+    public function validate($phone, Constraint $constraint)
+    {
         $separators = null;
         if(!empty($constraint->separators)){
             $separators = '['.$constraint->separators.']?';

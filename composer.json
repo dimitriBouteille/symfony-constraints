@@ -1,0 +1,27 @@
+{
+  "name": "dbout/symfony-constraints",
+  "description": "Symfony validation constraints",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Dimitri BOUTEILLE",
+      "email": "bonjour@dimitri-bouteille.fr",
+      "homepage": "https://github.com/dimitriBouteille",
+      "role": "Developer"
+    }
+  ],
+  "keywords": ["symfony", "sf", "validator", "constraints", "pseudo", "password", "phone", "postal code"],
+  "homepage": "https://github.com/dimitriBouteille/symfony-constraints/",
+  "support": {
+    "issues": "https://github.com/dimitriBouteille/symfony-constraints/issues"
+  },
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=7.1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Dbout\\Validator\\": "src/"
+    }
+  }
+}
